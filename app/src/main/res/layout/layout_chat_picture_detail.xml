@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_detail"
+        android:layout_width="1000dp"
+        android:layout_height="586dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/iv_chat_detail_popup_bg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="1000dp"
+        android:layout_height="586dp"
+        android:layout_margin="@dimen/dm_20dp"
+        android:background="@drawable/iv_chat_detail_popup_bg">
+
+        <com.csjbot.mobileshop.widget.MyBanner
+            android:id="@+id/chat_view_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:banner_image_scale_type="center_inside"
+            app:banner_indicator_drawable_selected="@drawable/iv_point_selected"
+            app:banner_indicator_drawable_unselected="@drawable/iv_point_unselected"
+            app:banner_indicator_margin="@dimen/dm_20dp" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:src="@drawable/iv_close_popup" />
+</FrameLayout>

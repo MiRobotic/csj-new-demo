@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_layout"
+    style="@style/VerticalGlobalBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm_110dp"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="607dp"
+        android:layout_marginTop="@dimen/dm_30dp">
+
+        <com.csjbot.mobileshop.widget.MyVideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.csjbot.mobileshop.widget.MyBanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:banner_image_scale_type="fit_xy"
+            app:banner_indicator_drawable_selected="@drawable/iv_point_selected"
+            app:banner_indicator_drawable_unselected="@drawable/iv_point_unselected"
+            app:banner_indicator_margin="@dimen/dm_20dp" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm_130dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_splash_text_bg"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/ic_splash_text_bg" >
+
+
+            <TextView
+                android:id="@+id/tv_robot_name"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm_30dp"
+                android:layout_marginRight="@dimen/dm_30dp"
+                android:text="@string/splash_show"
+                android:textColor="@color/ic_splash_text_normal_color"
+                android:textSize="@dimen/dm_35sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/VerticalGlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/ic_setting_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/vertical_work_content_height"
+            android:layout_margin="@dimen/vertical_content_maigin"
+            android:layout_marginTop="@dimen/dm_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_city"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dm_22sp" />
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_city" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dm_22sp" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_address" />
+
+                <Button
+                    android:id="@+id/bt_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/deepskyblue"
+                    android:text="@string/check"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_22sp" />
+            </LinearLayout>
+
+
+            <com.baidu.mapapi.map.TextureMapView
+                android:id="@+id/texture_mapview"
+                android:layout_width="@dimen/dm_800dp"
+                android:layout_height="@dimen/dm_400dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_save"
+                    android:layout_width="@dimen/dm_150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_20dp"
+                    android:background="@color/deepskyblue"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_24sp" />
+
+                <Button
+                    android:id="@+id/bt_clear"
+                    android:layout_width="@dimen/dm_150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_20dp"
+                    android:background="@color/deepskyblue"
+                    android:text="@string/clear_location"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

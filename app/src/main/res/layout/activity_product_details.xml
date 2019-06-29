@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/GlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dm_80dp"
+        android:layout_marginEnd="@dimen/dm_80dp"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dm_40dp"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/layout_global_chat_admin"
+            android:layout_width="680dp"
+            android:layout_height="780dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            android:layout_marginStart="@dimen/dp_40"
+            android:background="@drawable/product_details_bg"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/dm_30dp"
+            android:paddingStart="@dimen/dm_30dp"
+            android:paddingTop="@dimen/dm_30dp">
+
+            <FrameLayout
+                android:layout_width="440dp"
+                android:layout_height="540dp"
+                android:background="@drawable/picture_display_bg"
+                android:padding="@dimen/dp_10">
+
+                <com.csjbot.mobileshop.widget.MyBanner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:banner_image_scale_type="fit_xy"
+                    app:banner_indicator_drawable_selected="@drawable/iv_point_selected"
+                    app:banner_indicator_drawable_unselected="@drawable/iv_point_unselected"
+                    app:banner_indicator_margin="@dimen/dm_20dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="540dp"
+                android:layout_marginStart="@dimen/dm_80dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_cloth_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#0c0c0c"
+                    android:textSize="28sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/original_price"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/dm_20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_original_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dm_5dp"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/dm_22sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dm_20dp"
+                        android:text="@string/present_price"
+                        android:textSize="@dimen/dm_20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_present_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dm_5dp"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dm_22sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_attribute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_detail"
+                        android:textColor="#535353"
+                        android:textSize="@dimen/dm_21sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cloth_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:textColor="#535353"
+                        android:textSize="@dimen/dm_21sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

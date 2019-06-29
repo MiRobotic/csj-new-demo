@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/VerticalGlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/bg_set"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dm_40dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dm_30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_specialty"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/tc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/specialty"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_food"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/food" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delic_food"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_hotel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/hotel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/star_hotels"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fast_hotel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/fast_hotel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fast_hotel"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dm_30dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_information_desk"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/zxt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reception_desk"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cosmetology"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/mr" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/beauty"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_scenic"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/scenic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scenic"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_atm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/atm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/atm"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_convenience_store"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/bld" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/convenient_store"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/db" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bus"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_taxi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/taxi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/taxi"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_flower_shop"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:stateListAnimator="@anim/button_press">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/flower_shop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/flower_shop"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/chat_view"
+        layout="@layout/layout_global_chat"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/VerticalGlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.content.ContentActivity">
+
+    <include layout="@layout/layout_global_title" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="@dimen/dm_20dp"
+        android:layout_marginStart="@dimen/dm_20dp"
+        android:layout_marginTop="34dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="420dp">
+
+        <include
+            layout="@layout/layout_global_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="1000dp"
+        android:layout_height="586dp"
+        android:layout_margin="@dimen/dm_20dp"
+        android:background="@drawable/iv_chat_detail_popup_bg">
+        <WebView
+            android:id="@+id/webview_hyperlink_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="30dp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/webview_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_margin="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:background="@color/snow"
+            android:layout_alignParentTop="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/chat_view_loading_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="182dp"
+                android:src="@drawable/logo_only" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chat_view_loading_logo"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/chat_hyperlink_load_gif"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/chat_video_load_gif" />
+
+                <TextView
+                    android:id="@+id/chat_view_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/chat_hyperlink_load_gif"
+                    android:layout_marginLeft="@dimen/dm_40dp"
+                    android:layout_toRightOf="@+id/chat_hyperlink_load_gif"
+                    android:text="网页加载中..."
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:src="@drawable/iv_close_popup" />
+</FrameLayout>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/GlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dm_40dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/bg_set"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_take_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/camera_loading"
+                    android:scaleType="fitXY" />
+
+                <Button
+                    android:id="@+id/bt_take_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="@dimen/dm_20dp"
+                    android:background="@drawable/vipcenter_take_photo_btn_bg"
+                    android:paddingStart="@dimen/dm_50dp"
+                    android:text="@string/take_photo"
+                    android:textColor="@color/vipcenter_btn_color"
+                    android:textSize="@dimen/bt_take_photo"
+                    android:textAllCaps="false"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_complete_and_retake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="@dimen/dm_20dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/bt_retake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vipcenter_take_photo_again_btn_bg"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/dm_70dp"
+                        android:text="@string/retake_photo"
+                        android:textAllCaps="false"
+
+                        android:textColor="@color/vipcenter_btn_color"
+                        android:textSize="@dimen/bt_take_photo" />
+
+                    <Button
+                        android:id="@+id/bt_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dm_100dp"
+                        android:textAllCaps="false"
+
+                        android:background="@drawable/vipcenter_take_photo_ok_btn_bg"
+                        android:gravity="center"
+                        android:text="@string/complete"
+                        android:textColor="@color/vipcenter_btn_color"
+                        android:textSize="@dimen/bt_take_photo" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_invitor_success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/smile_ico"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_visit_success"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reception"
+                        android:textColor="@color/gray666666"
+                        android:textSize="@dimen/dm_28sp" />
+                    <TextView
+                        android:id="@+id/tv_visit_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0987E7"
+                        android:textSize="@dimen/dm_28sp"/>
+                    <TextView
+                        android:id="@+id/tv_visit_goal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/gray666666"
+                        android:textSize="@dimen/dm_28sp"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/gray666666"
+                    android:textSize="@dimen/dm_28sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_invitor_navi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/visitors_lead_way_btn"
+                        android:text="@string/visit_way"
+                        android:textColor="@color/vipcenter_btn_color"
+                        android:textSize="@dimen/bt_take_photo"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_repeat_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_set"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cry_ico"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_visited_success"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reception"
+                        android:textColor="@color/gray666666"
+                        android:textSize="@dimen/dm_28sp" />
+                    <TextView
+                        android:id="@+id/tv_visited_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0987E7"
+                        android:textSize="@dimen/dm_28sp"/>
+                    <TextView
+                        android:id="@+id/tv_visited_goal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/gray666666"
+                        android:textSize="@dimen/dm_28sp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/repeat_visit"
+                    android:textColor="#0987E7"
+                    android:textSize="@dimen/dm_28sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_invitor_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/visitors_return_btn"
+                        android:text="@string/back_to_home"
+                        android:textColor="@color/vipcenter_btn_color"
+                        android:textSize="@dimen/bt_take_photo"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_visitor_success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_set"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/smile_ico"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contracting"
+                        android:textColor="#0787E7"
+                        android:textSize="@dimen/dm_28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_navi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/visitors_lead_way_btn"
+                        android:text="@string/visit_way"
+                        android:textColor="@color/vipcenter_btn_color"
+                        android:textSize="@dimen/bt_take_photo" />
+
+                    <Button
+                        android:id="@+id/btn_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dm_100dp"
+                        android:background="@drawable/visitors_return_btn"
+                        android:text="@string/back_to_home"
+                        android:textColor="@color/vipcenter_btn_color"
+                        android:textSize="@dimen/bt_take_photo"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_visitor_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dm_30dp"
+                android:paddingRight="@dimen/dm_30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dm_24sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/visitname"
+                            android:textColor="#232323"
+                            android:textSize="@dimen/dm_24sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dm_20dp"
+                        android:layout_weight="2.5">
+                        <EditText
+                            android:id="@+id/et_visit_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dm_10dp"
+                            android:maxLength="40"
+                            android:background="@drawable/text_edit_bg"
+                            android:textSize="@dimen/dm_24sp"
+                            android:hint="@string/enter_name"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dm_24sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/visitPhone"
+                            android:textColor="#232323"
+                            android:textSize="@dimen/dm_24sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dm_20dp"
+                        android:layout_weight="2.5">
+                        <EditText
+                            android:id="@+id/et_visit_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dm_10dp"
+                            android:background="@drawable/text_edit_bg"
+                            android:textSize="@dimen/dm_24sp"
+                            android:maxLength="20"
+                            android:inputType="number"
+                            android:hint="@string/input_visit_phone"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dm_24sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/receptionistPhone"
+                            android:textColor="#232323"
+                            android:textSize="@dimen/dm_24sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dm_20dp"
+                        android:layout_weight="2.5">
+                        <EditText
+                            android:id="@+id/et_join_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dm_10dp"
+                            android:textSize="@dimen/dm_24sp"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:background="@drawable/text_edit_bg"
+                            android:hint="@string/input_receptionistPhone"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_10dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dm_24sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/visitCause"
+                            android:textColor="#232323"
+                            android:textSize="@dimen/dm_24sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dm_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dm_20dp"
+                        android:layout_weight="2.5">
+                        <EditText
+                            android:id="@+id/et_visit_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dm_10dp"
+                            android:maxLength="40"
+                            android:textSize="@dimen/dm_24sp"
+                            android:background="@drawable/text_edit_bg_2"
+                            android:hint="@string/input_visitCause"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm_50dp"
+                    android:background="@drawable/submit_btn"
+                    android:text="@string/submit"
+                    android:textColor="@color/vipcenter_btn_color"
+                    android:textSize="@dimen/bt_take_photo"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/chat_view"
+        layout="@layout/layout_global_chat"
+        android:layout_width="match_parent"
+        android:layout_height="563dp" />
+</LinearLayout>

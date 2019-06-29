@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // https://mvnrepository.com/artifact/io.netty/netty-all
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.23.Final'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+task copyMethod {
+    doLast {
+        copy {
+            from 'build/libs'
+            into '../coshandler/libs'
+            include '*.jar'
+        }
+    }
+}

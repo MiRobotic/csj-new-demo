@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/VerticalGlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_work_content_height"
+        android:layout_marginTop="@dimen/dm_60dp"
+        android:layout_marginLeft="@dimen/dm_20dp"
+        android:layout_marginRight="@dimen/dm_20dp"
+        android:layout_below="@+id/title_view">
+
+        <LinearLayout
+            android:layout_width="1100dp"
+            android:layout_height="560dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:background="@drawable/vertical_patrol_map_bg">
+                <ImageView
+                    android:id="@+id/iv_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/navi_default_map" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:background="@drawable/vertival_patrol_btn_bg">
+                <Button
+                    android:id="@+id/btn_patrol_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/start_btn"
+                    android:text="@string/start_patrol"
+                    android:textSize="@dimen/dm_20dp"
+                    android:paddingLeft="@dimen/dm_30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_patrol_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_settings_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dm_40dp"
+        android:layout_marginTop="@dimen/dm_140dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="563dp"
+        android:layout_below="@+id/layout_content">
+
+        <include
+            android:id="@+id/chat_view"
+            layout="@layout/layout_global_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>

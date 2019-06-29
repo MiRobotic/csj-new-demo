@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/iv_portrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:src="@drawable/iv_robot_portrait" />
+
+    <jaygoo.widget.wlv.WaveLineView
+        android:id="@+id/wave_line_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:wlvBackgroundColor="@android:color/transparent"
+        app:wlvMoveSpeed="290"
+        android:layout_alignBottom="@+id/iv_portrait"
+        android:layout_alignLeft="@+id/iv_portrait"
+        android:layout_alignRight="@+id/iv_portrait"
+        android:layout_alignTop="@+id/iv_portrait" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/iv_robot_text_bg"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="30dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/ic_robot_chat_text_color"
+        android:textSize="@dimen/dm_23sp"
+        android:visibility="gone" />
+</RelativeLayout>

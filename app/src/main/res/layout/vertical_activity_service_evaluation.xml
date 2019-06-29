@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/VerticalGlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_global_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/vertical_work_content_height"
+            android:layout_margin="@dimen/vertical_content_maigin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dm_380dp"
+                android:layout_height="@dimen/dm_120dp"
+                android:layout_margin="@dimen/dm_30dp"
+                android:stateListAnimator="@anim/button_press">
+
+                <Button
+                    android:id="@+id/buttonPanel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dm_154dp"
+                    android:background="@mipmap/satisfied_btn"
+                    android:stateListAnimator="@anim/button_press"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dm_70dp"
+                    android:gravity="center"
+                    android:text="@string/satisfied"
+                    android:textColor="@color/evaluation_button_color"
+                    android:textSize="38dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/dm_380dp"
+                android:layout_height="@dimen/dm_120dp"
+                android:layout_margin="@dimen/dm_30dp"
+                android:stateListAnimator="@anim/button_press">
+
+                <Button
+                    android:id="@+id/buttonPanel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dm_154dp"
+                    android:background="@mipmap/very_satisfied_btn"
+                    android:stateListAnimator="@anim/button_press"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dm_70dp"
+                    android:gravity="center"
+                    android:text="@string/very_satisfied"
+                    android:textColor="@color/evaluation_button_color"
+                    android:textSize="38dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/dm_380dp"
+                android:layout_height="@dimen/dm_120dp"
+                android:layout_margin="@dimen/dm_30dp"
+                android:stateListAnimator="@anim/button_press">
+
+                <Button
+                    android:id="@+id/buttonPanel3"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="@dimen/dm_154dp"
+                    android:background="@drawable/no_satisfied_btn"
+                    android:stateListAnimator="@anim/button_press"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/dm_70dp"
+                    android:gravity="center"
+                    android:text="@string/dissatisfied"
+                    android:textColor="@color/evaluation_button_color"
+                    android:textSize="38dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/chat_view"
+        layout="@layout/layout_global_chat"
+        android:layout_width="match_parent"
+        android:layout_height="563dp" />
+</LinearLayout>

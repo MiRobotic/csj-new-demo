@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_title"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="@dimen/dm_25dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/dm_14dp"
+        android:layout_marginStart="@dimen/dm_5dp"
+        android:background="@drawable/ic_content_vertical_bg"
+        android:paddingBottom="@dimen/dm_20dp"
+        android:paddingEnd="@dimen/dm_20dp"
+        android:paddingStart="@dimen/dm_20dp"
+        android:paddingTop="@dimen/dm_5dp">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+        </WebView>
+
+    </FrameLayout>
+
+</LinearLayout>

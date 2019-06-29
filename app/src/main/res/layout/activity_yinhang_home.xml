@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    style="@style/GlobalBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_view"
+        layout="@layout/layout_global_title" />
+
+    <include
+        android:id="@+id/chat_view"
+        layout="@layout/layout_global_chat_admin"
+        android:layout_width="680dp"
+        android:layout_height="780dp"
+        android:layout_marginLeft="@dimen/chat_view_margin_left"
+        android:layout_marginTop="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="780dp"
+        android:layout_marginTop="250dp"
+        android:layout_toRightOf="@+id/chat_view"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nav_yinhang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/iv_navigation"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/dm_30px"
+                    android:stateListAnimator="@anim/button_press"
+                    android:text="@string/nav_lobby"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_yinhang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/iv_product"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/dm_30px"
+                    android:stateListAnimator="@anim/button_press"
+                    android:text="@string/product_introduction"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/check_yinhang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/iv_query"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/dm_30px"
+                    android:stateListAnimator="@anim/button_press"
+                    android:text="@string/business_queryj"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm_28px"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/personal_center_yinhang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/iv_member_center"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/dm_30px"
+                    android:stateListAnimator="@anim/button_press"
+                    android:text="@string/personal_center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/about_yinhang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/iv_about"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/dm_30px"
+                    android:stateListAnimator="@anim/button_press"
+                    android:text="@string/about_bank"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/local_service_yinhang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/iv_peripheral_services"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="@dimen/dm_30px"
+                    android:stateListAnimator="@anim/button_press"
+                    android:text="@string/local_service"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_video_relativelaout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_view_video_mask"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/chat_view_frameLayout"
+        android:layout_width="1000dp"
+        android:layout_height="630dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/iv_chat_detail_popup_bg"
+        android:padding="@dimen/dm_10dp">
+
+        <com.csjbot.mobileshop.widget.MyVideoView
+            android:id="@+id/chat_view_videw_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.csjbot.mobileshop.widget.MyBanner
+            android:id="@+id/chat_view_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:banner_image_scale_type="fit_xy"
+            app:banner_indicator_drawable_selected="@drawable/iv_point_selected"
+            app:banner_indicator_drawable_unselected="@drawable/iv_point_unselected"
+            app:banner_indicator_margin="@dimen/dm_20dp" />
+
+        <ImageView
+            android:id="@+id/iv_audio_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/chat_view_video_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/video_loading_bg"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/cahat_view_loading_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="105dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="182dp"
+                android:src="@drawable/logo_only" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/cahat_view_loading_logo">
+
+                <ImageView
+                    android:id="@+id/chat_video_load_gif"
+                    android:src="@drawable/chat_video_load_gif"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/chat_view_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/dm_40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/chat_video_load_gif"
+                    android:layout_alignBottom="@+id/chat_video_load_gif"
+                    android:text="视频正在加载中..."
+                    android:textColor="@color/snow"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/chat_view_frameLayout"
+        android:layout_alignTop="@+id/chat_view_frameLayout"
+        android:layout_gravity="end"
+        android:layout_marginRight="-20dp"
+        android:layout_marginTop="-20dp"
+        android:background="@null"
+        android:src="@drawable/iv_close_popup" />
+</RelativeLayout>

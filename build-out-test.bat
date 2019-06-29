@@ -1,0 +1,2 @@
+@echo off
+gradlew assembleSnow_i18nFor_test assembleAlice_i18nFor_test assembleAlice_Plus_i18nFor_test assembleAmy_Plus_i18nFor_test

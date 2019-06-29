@@ -1,0 +1,2 @@
+@echo off
+gradlew assembleSnow_i18nRelease assembleAlice_i18nRelease assembleAlice_Plus_i18nRelease assembleAmy_Plus_i18nRelease 

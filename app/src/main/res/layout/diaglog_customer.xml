@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/customer_bg">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_close"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="600dp"-->
+        <!--android:layout_marginTop="139dp"-->
+        <!--android:src="@mipmap/close_ico" />-->
+
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingEnd="50dp"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="120dp"
+        android:src="@mipmap/close_ico" />
+
+
+
+
+    <TextView
+        android:textColor="#0c0c0c"
+        android:layout_marginTop="@dimen/dm_230dp"
+        android:id="@+id/content_tip"
+        android:textSize="@dimen/dm_36sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在连接中..."/>
+
+    <Button
+        android:id="@+id/tv_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dm_54dp"
+        android:background="@drawable/customer_dialog_selecter"
+        android:gravity="center"
+        android:text="挂断"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm_33sp" />
+
+
+
+
+</RelativeLayout>

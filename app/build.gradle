@@ -1,0 +1,299 @@
+apply plugin: 'com.android.application'
+
+android {
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    defaultConfig {
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_SNOW', '"snow"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_ALICE', '"alice"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_ALICE_PLUS', '"alice_plus"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_AMY_PLUS', '"amy_plus"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_ALICE_BAIDU', '"alice_baidu"'
+
+
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_SNOW_i18n', '"snow_i18n"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_ALICE_i18n', '"alice_i18n"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_ALICE_PLUS_i18n', '"alice_plus_i18n"'
+        buildConfigField 'String', 'ROBOT_TYPE_DEF_AMY_PLUS_i18n', '"amy_plus_i18n"'
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        productFlavors {
+            flavorDimensions 'default'
+            snow {
+                buildConfigField 'String', 'robotType', '"snow"'
+                buildConfigField 'String', 'category', '"CsjRobotApp_snow"'
+                versionName "CsjRobotApp_Snow_" + rootProject.ext.android["versionName"]
+                manifestPlaceholders = [app_name         : "Snow",
+                                        screenOrientation: "landscape"]
+            }
+
+            alice {
+                buildConfigField 'String', 'robotType', '"alice"'
+                buildConfigField 'String', 'category', '"CsjRobotApp_alice"'
+                versionName "CsjRobotApp_Alice_" + rootProject.ext.android["versionName"]
+                manifestPlaceholders = [app_name         : "Alice",
+                                        screenOrientation: "landscape"]
+            }
+
+            alice_plus {
+                buildConfigField 'String', 'robotType', '"alice_plus"'
+                buildConfigField 'String', 'category', '"CsjRobotApp_alice_plus"'
+                versionName "CsjRobotApp_Alice_Plus_" + rootProject.ext.android["versionName"]
+                manifestPlaceholders = [app_name         : "Alice Pro",
+                                        screenOrientation: "portrait"]
+            }
+
+            amy_plus {
+                buildConfigField 'String', 'robotType', '"amy_plus"'
+                buildConfigField 'String', 'category', '"CsjRobotApp_amy_plus"'
+                versionName "CsjRobotApp_Amy_Plus_" + rootProject.ext.android["versionName"]
+                manifestPlaceholders = [app_name         : "Amy Pro",
+                                        screenOrientation: "portrait"]
+            }
+
+            /// _i18n
+        }
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        useLibrary 'org.apache.http.legacy'
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            //这里修改apk文件名
+            def fileName = "${variant.productFlavors.name}${rootProject.ext.android["versionName"]}${rootProject.ext.android["buildVersion"]}.apk"
+
+            switch (variant.buildType.name) {
+                case "debug":
+                    fileName = "DEV_CsjRobotApp_" + fileName
+                    break
+                case "for_test":
+                    fileName = "TE_CsjRobotApp_" + fileName
+                    // 自定义输出路径
+                    variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + File.separator + "outputs")
+                    break
+                case "release":
+                    // 自定义输出路径
+                    variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + File.separator + "outputs")
+                    fileName = "${variant.productFlavors.name}${rootProject.ext.android["versionName"]}.apk"
+                    fileName = "CsjRobotApp_" + fileName
+                    break
+                default:
+                    break
+            }
+            outputFileName = fileName
+        }
+    }
+
+    signingConfigs {
+        // 指定签名文件
+        debug {
+//            storeFile file("debug.keystore")
+//            storePassword 'android'
+            storeFile file("csjbotKeyStore.jks")
+            keyAlias 'csjbot'
+            keyPassword 'root1234'
+            storePassword 'root1234'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [app_icon: "@mipmap/ic_startbutton"]
+
+            versionNameSuffix ""
+            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bd.example.com:1234567890/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://aws.example.com:1234567890/"'
+
+            buildConfigField 'String', 'LINUX_ADRESS', '"bd.example.com"'
+            buildConfigField 'String', 'LINUX_ADRESS_I18N', '"aws.example.com"'
+            buildConfigField 'String', 'LINUX_PORT', '"1234567890"'
+        }
+
+        // 开发环境
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [app_name: "@string/app_name_debug",
+                                    app_icon: "@mipmap/ic_startbutton_debug"]
+
+            versionNameSuffix rootProject.ext.android["buildVersion"] + "_DEV"
+            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bddev.example.com:1234567890/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://aws.example.com:1234567890/"'
+
+            buildConfigField 'String', 'LINUX_ADRESS', '"bddev.example.com"'
+            buildConfigField 'String', 'LINUX_ADRESS_I18N', '"aws.example.com"'
+            buildConfigField 'String', 'LINUX_PORT', '"1234567890"'
+        }
+
+        // 测试环境
+        for_test.initWith(buildTypes.debug)
+        for_test {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 替换成测试的图标
+            manifestPlaceholders = [app_name: "@string/app_name_test",
+                                    app_icon: "@mipmap/ic_startbutton_test"]
+
+            versionNameSuffix rootProject.ext.android["buildVersion"] + "_TE"
+            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bdtest.example.com:1234567890/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://awstest.example.com:1234567890/"'
+
+            buildConfigField 'String', 'LINUX_ADRESS', '"bdtest.example.com"'
+            buildConfigField 'String', 'LINUX_ADRESS_I18N', '"awstest.example.com"'
+            buildConfigField 'String', 'LINUX_PORT', '"1234567890"'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            // 将 jniLib 指向 libs
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+//        , '../nuance/libs'
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.1'
+            }
+        }
+    }
+}
+
+
+
+dependencies {
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["awesomeQRCode"]
+    implementation rootProject.ext.dependencies["rxjava2"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["retrofit_rxjava"]
+    implementation rootProject.ext.dependencies["retrofit_gson"]
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["bugly_sdk"]
+    implementation rootProject.ext.dependencies["bugly_ndk"]
+    implementation rootProject.ext.dependencies["supertextview"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["interceptor"]
+    // ARouter
+    //    compile 'com.baidu.mobstat:mtj-sdk-circle:latest.integration'
+    implementation('com.danikula:videocache:2.7.1') {
+        exclude group: 'org.slf4j'
+    }
+    implementation files('libs/pgliblivemulti.jar')
+    implementation files('libs/pgnpp.jar')
+    implementation project(':printer')
+    implementation project(':coshandler')
+
+    //    compile project(':nuance')
+    implementation files('libs/Baidu_Mtj_android_3.9.2.0.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+
+    implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.azoft.carousellayoutmanager:carousel:1.2.1'
+    implementation 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v1.0.7'
+    implementation 'com.alibaba:fastjson:1.2.39'
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.alibaba:arouter-api:1.4.1'
+    implementation 'skin.support:skin-support:3.1.1'
+    implementation 'skin.support:skin-support-design:3.1.1'
+    implementation 'skin.support:skin-support-constraint-layout:3.1.1'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.google.zxing:android-core:3.3.0'
+    implementation 'com.google.zxing:javase:3.3.3'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+    implementation 'com.github.razerdp:BasePopup:2.0.9'
+    implementation 'cn.jiguang.sdk:jpush:3.1.8'
+    implementation 'cn.jiguang.sdk:jcore:1.2.6'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+    implementation 'com.github.Jay-Goo:WaveLineView:v1.0.3'
+
+    testImplementation 'junit:junit:4.12'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+}
+
+task cleanTestApks(type: Delete) << {
+    FileTree tree = fileTree(dir: "../output")
+    println("=====> cleanTestApks")
+
+    tree.each { File file ->
+        if (file.toString().contains("apk")) {
+            println("=====> " + file.toString())
+            delete file
+        }
+    }
+}
+
+//
+beforeEvaluate {
+    tasks.matching {
+        it.name.endsWith("test") || it.name.endsWith("Test")
+    }.each {
+        tk -> tk.dependsOn(cleanTestApks)
+    }
+}

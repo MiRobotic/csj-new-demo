@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_detail_main"
+    style="@style/VerticalGlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="1040dp"
+        android:layout_height="740dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="34dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/skin_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="@dimen/dm_20dp"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_global_chat"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+
+</LinearLayout>

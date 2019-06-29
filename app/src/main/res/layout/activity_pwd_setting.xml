@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/GlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <FrameLayout
+        android:id="@+id/father"
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/ic_setting_bg">
+
+        <include
+            layout="@layout/pwd_setting_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

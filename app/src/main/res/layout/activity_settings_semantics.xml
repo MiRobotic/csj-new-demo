@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/GlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_view"
+        layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_setting_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dm_40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dm_20dp"
+                android:text="@string/chat_switch"
+                android:textSize="@dimen/dm_26dp" />
+
+            <CheckBox
+                android:id="@+id/cb_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                android:gravity="bottom"
+                android:padding="@dimen/dm_5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dm_40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dm_20dp"
+                android:text="@string/semantics_switch"
+                android:textSize="@dimen/dm_26dp" />
+
+            <CheckBox
+                android:id="@+id/cb_semantics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                android:gravity="bottom"
+                android:padding="@dimen/dm_5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_vague_query_percentage"
+                android:textSize="@dimen/dm_22dp" />
+
+            <EditText
+                android:id="@+id/et_score"
+                android:layout_width="@dimen/dm_50dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:maxLength="6"
+                android:text="0.9"
+                android:textSize="@dimen/dm_18dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm_50dp"
+            android:background="@color/deepskyblue"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm_22sp" />
+
+        <Button
+            android:id="@+id/bt_unknown_problem_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm_50dp"
+            android:background="@color/deepskyblue"
+            android:padding="@dimen/dm_5dp"
+            android:text="@string/in_unkown_problem_answer_setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dm_22sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

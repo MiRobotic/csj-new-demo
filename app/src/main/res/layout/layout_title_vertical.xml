@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/iv_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dm_5dp"
+        android:layout_marginTop="@dimen/dm_5dp"
+        android:src="@drawable/wifi_2_vertical" />
+
+    <ImageButton
+        android:id="@+id/ib_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:background="@null"
+        android:stateListAnimator="@anim/button_press"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_mainpage_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:text="中文（简体）"
+        android:textColor="#000000"
+        android:textSize="@dimen/dm_30sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:background="@null"
+        android:src="@drawable/return_btn_vertical"
+        android:stateListAnimator="@anim/button_press" />
+
+    <ImageButton
+        android:id="@+id/ib_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dm_160dp"
+        android:background="@null"
+        android:src="@drawable/home_btn_vertical"
+        android:stateListAnimator="@anim/button_press" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:maxHeight="@dimen/dm_65dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_shop_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="280dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/ib_shop_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dm_15dp"
+            android:layout_marginEnd="@dimen/dm_10dp"
+            android:layout_marginTop="@dimen/dm_15dp"
+            android:background="@null"
+            android:src="@drawable/head_shopcart_btn_vertical"
+            android:stateListAnimator="@anim/button_press" />
+
+        <TextView
+            android:id="@+id/tv_shop_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/shop_cart_num"
+            android:gravity="center"
+            android:textSize="@dimen/dm_10sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <ImageButton
+        android:id="@+id/ib_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dm_160dp"
+        android:background="@null"
+        android:src="@drawable/head_customerservice_btn_vertical"
+        android:stateListAnimator="@anim/button_press" />
+
+    <ImageButton
+        android:id="@+id/ib_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dm_40dp"
+        android:background="@null"
+        android:src="@drawable/head_setting_btn_vertical"
+        android:stateListAnimator="@anim/button_press" />
+</RelativeLayout>

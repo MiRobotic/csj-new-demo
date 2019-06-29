@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/GlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_global_title" />
+
+    <LinearLayout
+        android:layout_width="1120dp"
+        android:layout_height="700dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/music_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.csjbot.mobileshop.widget.MusicView
+            android:id="@+id/music_view"
+            android:layout_width="342dp"
+            android:layout_height="342dp"
+            android:layout_marginTop="@dimen/dm_30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_sing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm_40dp"
+            android:textColor="#0c0c0c"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm_10dp"
+            android:textColor="#535353"
+            android:textSize="23sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dm_50dp"
+                android:background="@null"
+                android:src="@drawable/prev_btn"
+                android:stateListAnimator="@anim/button_press" />
+
+
+            <ImageButton
+                android:id="@+id/ib_ctrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@anim/button_press" />
+
+            <ImageButton
+                android:id="@+id/ib_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dm_50dp"
+                android:background="@null"
+                android:src="@drawable/next_btn"
+                android:stateListAnimator="@anim/button_press" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 25,
+            applicationId    : "com.csjbot.mobileshop",
+            versionCode      : 73,
+            versionName      : 'V3.6.0',
+            buildVersion     : '.0008',
+            VSupportSdk      : '23.3.0'
+    ]
+
+    dependencies = [
+            // 网络请求框架
+            "retrofit"       : "com.squareup.retrofit2:retrofit:2.3.0",
+            // 请求框架适配器
+            "retrofit_rxjava": "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            "retrofit_gson"  : "com.squareup.retrofit2:converter-gson:2.3.0",
+            // gson
+            "gson"           : "com.google.code.gson:gson:2.8.1",
+            // rxjava2
+            "rxjava2"        : "io.reactivex.rxjava2:rxjava:2.1.2",
+            // rxandroid
+            "rxandroid"      : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            // Glide
+            "glide"          : "com.github.bumptech.glide:glide:4.8.0",
+            // 二维码生成和美化
+            "awesomeQRCode"  : "com.github.SumiMakito:AwesomeQRCode:1.0.5",
+            // 事件总线
+            "eventbus"       : "org.greenrobot:eventbus:3.0.0",
+            // bugly
+            "bugly_sdk"      : "com.tencent.bugly:crashreport:2.8.6",
+            "bugly_ndk"      : "com.tencent.bugly:nativecrashreport:3.6.0.1",
+            "supertextview"  : "com.github.lygttpod:SuperTextView:2.1.0",
+            // okhttp日志
+            "interceptor"    : "com.squareup.okhttp3:logging-interceptor:3.4.1",
+    ]
+
+}

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/GlobalChildBackgroundImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_view"
+        layout="@layout/layout_global_title" />
+
+    <ScrollView
+        android:layout_width="1040dp"
+        android:layout_height="720dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_setting_bg"
+        android:gravity="center"
+        android:padding="@dimen/dm_5dp">
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="*">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_2px"
+                android:background="@color/red" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green">
+
+                <TextView
+                    android:id="@+id/tv_header1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="header1"
+                    android:textSize="@dimen/dm_22sp" />
+
+                <TextView
+                    android:id="@+id/tv_header2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="header1"
+                    android:textSize="@dimen/dm_22sp" />
+
+                <TextView
+                    android:id="@+id/tv_header3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="header1"
+                    android:textSize="@dimen/dm_22sp" />
+
+                <TextView
+                    android:id="@+id/tv_header4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="header1"
+                    android:textSize="@dimen/dm_22sp" />
+
+                <TextView
+                    android:id="@+id/tv_header5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dm_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="header1"
+                    android:textSize="@dimen/dm_22sp" />
+
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_2px"
+                android:background="@color/red" />
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <com.csjbot.mobileshop.widget.TableView
+            android:id="@+id/table_view"
+            android:layout_width="@dimen/dm_800dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dm_10dp"
+            app:dividerColor="@color/red"
+            app:dividerWidth="2px"
+            app:headerColor="@color/green"
+            app:headerTextColor="@color/blue"
+            app:headerTextSize="@dimen/dm_22sp"
+            app:rowHeight="@dimen/dm_60dp"
+            app:textColor="@color/black"
+            app:textSize="@dimen/dm_20sp"
+            app:unitColumnWidth="@dimen/dm_0dp" />
+    </ScrollView>
+</LinearLayout>

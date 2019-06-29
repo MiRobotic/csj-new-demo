@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dm_20dp"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dm_20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm_20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name_title"
+            style="@style/navi_set_textview"
+            android:layout_width="@dimen/dm_110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:text="@string/patrol_point" />
+
+        <EditText
+            android:id="@+id/et_navi_name"
+            style="@style/setting_edit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/dm_10dp"
+            android:layout_marginRight="@dimen/dm_20dp"
+            android:layout_toRightOf="@id/tv_name_title"
+            android:singleLine="true"
+            android:hint="@string/plz_input"
+            android:textSize="@dimen/dm_18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dm_5dp"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="@dimen/dm_25sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_get_position"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm_10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_x_point"
+                    style="@style/navi_set_textview"
+                    android:layout_width="@dimen/dm_110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="@string/navi_xpoint" />
+
+                <EditText
+                    android:id="@+id/et_navi_xpoint"
+                    style="@style/setting_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/dm_10dp"
+                    android:layout_marginRight="@dimen/dm_20dp"
+                    android:layout_toRightOf="@+id/tv_x_point"
+                    android:inputType="number|numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dm_18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dm_5dp"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm_10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_y_point"
+                    style="@style/navi_set_textview"
+                    android:layout_width="@dimen/dm_110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="@string/navi_ypoint" />
+
+                <EditText
+                    android:id="@+id/et_navi_ypoint"
+                    style="@style/setting_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/dm_10dp"
+                    android:layout_marginRight="@dimen/dm_20dp"
+                    android:layout_toRightOf="@+id/tv_y_point"
+                    android:inputType="number|numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dm_18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dm_5dp"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm_10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_r_point"
+                    style="@style/navi_set_textview"
+                    android:layout_width="@dimen/dm_110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/navi_zpoint" />
+
+                <EditText
+                    android:id="@+id/et_navi_zpoint"
+                    style="@style/setting_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/dm_10dp"
+                    android:layout_marginRight="@dimen/dm_20dp"
+                    android:layout_toRightOf="@+id/tv_r_point"
+                    android:inputType="number|numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dm_18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dm_5dp"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dm_25sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_get_position"
+            style="@style/navi_get_pose_textview"
+            android:layout_width="@dimen/dm_90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dm_20dp"
+            android:layout_marginRight="@dimen/dm_20dp"
+            android:background="@drawable/navi2_btn"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dm_5dp"
+            android:paddingRight="@dimen/dm_5dp"
+            android:text="@string/get_navi_point"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+
+</LinearLayout>
