@@ -130,12 +130,12 @@ android {
             manifestPlaceholders = [app_icon: "@mipmap/ic_startbutton"]
 
             versionNameSuffix ""
-            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bd.example.com:1234567890/"'
-            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://aws.example.com:1234567890/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bd.example.com:12345/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://aws.example.com:12345/"'
 
             buildConfigField 'String', 'LINUX_ADRESS', '"bd.example.com"'
             buildConfigField 'String', 'LINUX_ADRESS_I18N', '"aws.example.com"'
-            buildConfigField 'String', 'LINUX_PORT', '"1234567890"'
+            buildConfigField 'String', 'LINUX_PORT', '"12345"'
         }
 
         // 开发环境
@@ -146,12 +146,12 @@ android {
                                     app_icon: "@mipmap/ic_startbutton_debug"]
 
             versionNameSuffix rootProject.ext.android["buildVersion"] + "_DEV"
-            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bddev.example.com:1234567890/"'
-            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://aws.example.com:1234567890/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bddev.example.com:12345/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://aws.example.com:12345/"'
 
             buildConfigField 'String', 'LINUX_ADRESS', '"bddev.example.com"'
             buildConfigField 'String', 'LINUX_ADRESS_I18N', '"aws.example.com"'
-            buildConfigField 'String', 'LINUX_PORT', '"1234567890"'
+            buildConfigField 'String', 'LINUX_PORT', '"12345"'
         }
 
         // 测试环境
@@ -164,12 +164,12 @@ android {
                                     app_icon: "@mipmap/ic_startbutton_test"]
 
             versionNameSuffix rootProject.ext.android["buildVersion"] + "_TE"
-            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bdtest.example.com:1234567890/"'
-            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://awstest.example.com:1234567890/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS', '"http://bdtest.example.com:12345/"'
+            buildConfigField 'String', 'DEFAULT_ADRESS_I18N', '"http://awstest.example.com:12345/"'
 
             buildConfigField 'String', 'LINUX_ADRESS', '"bdtest.example.com"'
             buildConfigField 'String', 'LINUX_ADRESS_I18N', '"awstest.example.com"'
-            buildConfigField 'String', 'LINUX_PORT', '"1234567890"'
+            buildConfigField 'String', 'LINUX_PORT', '"12345"'
         }
     }
 
