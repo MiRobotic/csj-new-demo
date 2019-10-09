@@ -6,6 +6,11 @@ android {
         useNewCruncher = false
     }
 
+    packagingOptions{
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     defaultConfig {
@@ -210,6 +215,7 @@ configurations.all {
             }
         }
     }
+
 }
 
 
@@ -254,7 +260,11 @@ dependencies {
     implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
     implementation 'com.github.Jay-Goo:RangeSeekBar:v1.0.7'
     implementation 'com.alibaba:fastjson:1.2.39'
-    implementation 'com.github.promeg:tinypinyin:2.0.3'
+
+    implementation 'com.github.promeg:tinypinyin:2.0.0' // TinyPinyin核心包，约80KB
+    implementation 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.0' // 可选，适用于Android的中国地区词典
+    implementation 'com.github.promeg:tinypinyin-lexicons-java-cncity:2.0.0' // 可选，适用于Java的中国地区词典
+
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.jakewharton:butterknife:8.8.1'
     implementation 'com.alibaba:arouter-api:1.4.1'
